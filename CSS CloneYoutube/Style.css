@@ -1,0 +1,234 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, arial;
+}
+
+body{
+    margin: 0;
+}
+
+.video-desc a{
+    text-decoration: none;
+    color: black;
+    margin-right: 5px;
+}
+
+.videos-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 3rem 1rem;
+    padding: 20px;
+    padding-bottom: 200px;
+    margin: 0 1.5rem;
+    border: 2px solid #444343;
+    border-bottom: none;
+}
+
+.videos-section:first-child{
+    border-top: none;
+}
+
+.thumbnail::before {
+    content: attr(data-duration);
+    position: absolute;
+    background-color: black;
+    color: #fff; /*coloquei branco para conseguir visualizar*/
+    right: 5px;
+    bottom: 5px;
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    font-size: 1em; /*aumentei a fonte para conseguir visualizar*/
+}
+.video-bottom-section{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+/* Define o layout do contêiner de vídeo */
+.video-container {
+    display: flex; /* Usa flexbox para organizar o conteúdo verticalmente */
+    flex-direction: column; /* Empilha os elementos um abaixo do outro */
+    margin: 10px; /* Adiciona um espaço externo ao redor do contêiner */
+    }
+    
+    /* Ajusta o tamanho do contêiner de miniatura */
+.thumbnail {
+    width: 100%; /* O contêiner ocupa toda a largura disponível */
+    position: relative;
+    height: auto; /* A altura é ajustada automaticamente */
+}
+    
+    /* Define o estilo das imagens dentro do .thumbnail */
+.thumbnail img {
+    width: 100%; /* A imagem ocupa toda a largura do contêiner */
+    height: auto; /* Ajusta a altura proporcionalmente à largura */
+    object-fit: cover; /* A imagem cobre o contêiner mantendo a proporção */
+    display: block; /* Remove espaços indesejados de imagens inline */
+    max-width: 100%; /* Evita que a imagem ultrapasse o tamanho do contêiner */
+}
+    
+    /* Estilo para o ícone do canal */
+.channel-icon {
+    width: 40px; /* Define uma largura fixa para o ícone */
+    height: 40px; /* Define uma altura fixa para o ícone */
+    border-radius: 50%; /* Torna o ícone circular */
+    object-fit: cover; /* Ajusta a imagem mantendo a proporção */
+    margin-right: 1rem;
+}
+
+.thumbnail-image{
+    width: 100%;
+    height: 100%;
+    min-width: 250px;
+    min-height: 150px;
+    background-color: #aaa;
+}
+
+.Video-name{
+    font-style: bold;
+    font-size: 1.1rem;
+    margin-bottom: .3rem;
+}
+
+.Video-ChannelName{
+    font-size: 0.9rem;
+    margin-bottom: 0.1rem;
+    transition: color 150ms;
+    cursor: pointer;
+}
+
+.Video-ChannelName:hover{
+    color: #111;
+}
+
+.Video-ChannelName, .video-metadata{
+    color: #333;
+}
+
+.video-desc{
+    display: flex;
+    flex-direction: column;
+}
+
+.videos-section-title{
+    grid-column: 1 /-1;
+    margin: -.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .5rem;
+}
+
+.videos-section-title-close{
+    border: none;
+    background: none;
+    padding: 0;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.Videos{
+    background-color: #f9f9f9;
+}
+
+.categories{
+    padding: 1rem 2rem;
+    border-top: 1px solid #999;
+    border-bottom:1px solid#999;
+    display: flex;
+    justify-content: center;
+}
+
+.category-section{
+    display: flex;
+    overflow: hidden;
+}
+
+.category{
+    padding: .5rem 1rem;
+    margin-right: 1rem;
+    word-wrap: none;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    border-radius: 900px;
+    background-color: #e7e7e7;
+    cursor: pointer;
+    font-size: inherit;
+    transition: background-color 50ms;
+}
+
+.category:hover{
+    background-color: #ddd;
+}
+
+.category:active{       
+    background-color: #606060;
+    color: white;
+    border-color: #eee;
+}
+
+.category:last-child{
+    margin-right: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.Youtube-logo{
+    height: 70px;
+    border: 1px solid white;
+}
+
+.Search-bar{
+    display: flex;
+    flex-grow: 1;
+    margin: 0 1rem 0 4rem;
+}
+
+.search-input{
+    width: 50%;
+    font-size: inherit;
+    padding: .4rem;
+    border: 1px solid #777;
+    border-radius: 50px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-left: 13rem;
+}
+
+.search-btn{
+    display: flex;
+    align-items: center;
+    padding: 0 1.25rem;
+    border: 1px solid #777;
+    background-color: #f8f8f8;
+    border-left: none;
+    border-radius: 40px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    cursor: pointer; 
+}
+
+.upload-video{
+    height: 31px;
+    width: 31px;
+}
+
+.menu-items{
+    margin-right: 10px;
+    padding-right: 1rem;
+}
+
+.channel-mini{
+    height: 37px;
+    width: 37px;
+    border-radius: 50%;
+}
